@@ -1,0 +1,99 @@
+@import "./variabales";
+
+.skills_Container{
+    padding: 80px 0;
+    background-color: $background-color2;
+    width: 100vw;
+    height: 100vh;
+    @media only screen and (max-width: 785px) {
+        
+        height: 100%;
+        padding-bottom: 480px;
+
+    }
+
+.Skills_Header{
+    font-size: 50px;
+    color: rgb(8, 253, 216);
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    margin-bottom: 87px;
+    margin-top: -36px;
+
+    @media only screen and (max-width: 785px) {
+        
+        text-align: center;
+
+    
+    }
+}
+
+.skill_Container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    @media only screen and (max-width: 785px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+    }
+.Skill{
+    width: 50%;
+    font-size: 25px;
+    margin: 0 auto;
+    text-align: justify;
+    margin-left: 25px;
+    line-height: 1.5;
+    color: white;
+    @media only screen and (max-width: 785px) {
+        width: 100%;
+       
+        font-size: 20px;
+        margin: 0 auto;
+        text-align: start;
+    }
+ 
+    a{
+        text-decoration: none;
+        color: $seconde-color;
+    }
+}
+
+.TagCloud{
+    width: 50%;
+    @media only screen and (max-width: 785px) {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+   
+    .tag-cloud-container{
+        @media only screen and (max-width: 785px) {
+            display: flex;
+            align-items: center;
+            position: relative;
+            top: 100px;
+
+        }
+        .wrapper{
+            @media only screen and (max-width: 785px) {
+              margin: 20px 0;
+              margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 40% !important;
+    top: 110px !important;
+            }
+            a{
+                color: $seconde-color !important;
+            }
+        }
+    }
+}
+}
+}

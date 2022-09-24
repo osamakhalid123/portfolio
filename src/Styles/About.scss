@@ -1,0 +1,25 @@
+@import "./variabales";
+
+.about{
+   display: flex;
+   flex-direction: column;
+    color: white;
+    height: 100vh;
+    background-color: $background-color2;
+
+
+    h1{
+        font-size:75px;
+        color: $main-color;
+        margin-bottom: 40px;
+    }
+    .text1{
+        margin-bottom: 40px;
+        line-height: 1.5;
+        font-size:20px;
+    }
+    .text2{
+        line-height: 1.5;
+        font-size:20px;
+    }
+}
