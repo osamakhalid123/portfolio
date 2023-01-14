@@ -1,9 +1,6 @@
 @import "./variabales";
 
-
-
 @mixin after_contant {
-
   content: "";
   display: flex;
   margin-bottom: 5px;
@@ -16,9 +13,7 @@
   justify-content: center;
   transition: 0.5s ease;
   cursor: pointer;
-  
 }
-
 
 @mixin nav_icon {
   color: $base-color;
@@ -26,301 +21,267 @@
   transition: 0.3 ease-in-out;
   opacity: 1;
   position: relative;
-
-  
 }
 
-.nav-bar{
-    background-color: $nav-bac-color;
+.nav-bar {
+  background-color: $nav-bac-color;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+
+  .Logo {
+    color: $main-color;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 58px;
+    text-shadow: -5px 1px rgb(253, 33, 85);
+  }
+
+  h1 {
+    color: $base-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    &:hover {
+      color: $main-color;
+    }
+  }
+
+  .a-icons {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-      align-items: center;
-    height: 60px;
+    align-items: center;
+    text-align: center;
+    min-width: 300px;
 
+    .homeIcon {
+      @include nav_icon;
+      &::after {
+        @include after_contant;
+      }
 
-
-
-    .Logo{
+      & {
+        &:after {
+          content: "HOME";
+          color: $main-color;
+          font-size: 14px;
+        }
+      }
+      &:hover {
         color: $main-color;
-        font-weight: bolder;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 58px;
-        text-shadow: -5px 1px rgb(253,33,85);
 
-    }
-    
-    h1{
-        color: $base-color;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 12px;
-        &:hover{
-            color: $main-color;
+        svg {
+          opacity: 0;
         }
+
+        &:after {
+          opacity: 1;
+        }
+      }
     }
-
-
-    .a-icons{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-        align-items: center;
-        text-align: center;
-        min-width: 300px;
-        
-
-
-
-    .homeIcon{
-           @include nav_icon;
-            &::after{
-                @include after_contant;
-
-            }
-
-            &{
-                &:after {
-                  content: 'HOME';
-                  color: $main-color;
-                  font-size: 14px;
-                }
-              }
-            &:hover {
-                color: $main-color;
-        
-                svg {
-                  opacity: 0;
-                }
-        
-                &:after {
-                  opacity: 1;
-                }
-            }
-            
-           
-    }
-    .About{
+    .About {
       @include nav_icon;
 
+      &::after {
+        @include after_contant;
+      }
 
+      & {
+        &:after {
+          content: "About";
+          color: $main-color;
+          font-size: 14px;
+        }
+      }
+      &:hover {
+        color: $main-color;
 
-        &::after{
-          @include after_contant;
+        svg {
+          opacity: 0;
         }
 
-        &{
-            &:after {
-              content: 'About';
-              color: $main-color;
-              font-size: 14px;
-            }
-          }
-        &:hover {
-            color: $main-color;
-    
-            svg {
-              opacity: 0;
-            }
-    
-            &:after {
-              opacity: 1;
-            }
+        &:after {
+          opacity: 1;
         }
-        
+      }
     }
-    .Skills{
+    .Skills {
       @include nav_icon;
 
+      &::after {
+        @include after_contant;
+      }
 
+      & {
+        &:after {
+          content: "Skills";
+          color: $main-color;
+          font-size: 14px;
+        }
+      }
+      &:hover {
+        color: $main-color;
 
-        &::after{
-          @include after_contant;
+        svg {
+          opacity: 0;
         }
 
-        &{
-            &:after {
-              content: 'Skills';
-              color: $main-color;
-              font-size: 14px;
-            }
-          }
-        &:hover {
-            color: $main-color;
-    
-            svg {
-              opacity: 0;
-            }
-    
-            &:after {
-              opacity: 1;
-            }
+        &:after {
+          opacity: 1;
         }
-        
+      }
     }
 
-    .MyWork{
+    .MyWork {
       @include nav_icon;
 
+      &::after {
+        @include after_contant;
+      }
 
+      & {
+        &:after {
+          content: "Projects";
+          color: $main-color;
+          font-size: 14px;
+          margin-top: 16px;
+        }
+      }
+      &:hover {
+        color: $main-color;
 
-        &::after{
-          @include after_contant;
+        svg {
+          opacity: 0;
         }
 
-        &{
-            &:after {
-              content: 'Projects';
-              color: $main-color;
-              font-size: 14px;
-              margin-top: 16px;
-
-            }
-          }
-        &:hover {
-            color: $main-color;
-    
-            svg {
-              opacity: 0;
-            }
-    
-            &:after {
-              opacity: 1;
-            }
+        &:after {
+          opacity: 1;
         }
-        
+      }
     }
 
-    .Contact{
+    .Contact {
       @include nav_icon;
 
+      &::after {
+        @include after_contant;
+      }
 
+      & {
+        &:after {
+          content: "Contact";
+          color: $main-color;
+          font-size: 14px;
+          margin-top: 16px;
+        }
+      }
+      &:hover {
+        color: $main-color;
 
-        &::after{
-          @include after_contant;
+        svg {
+          opacity: 0;
         }
 
-        &{
-            &:after {
-              content: 'Contact';
-              color: $main-color;
-              font-size: 14px;
-              margin-top: 16px;
-
-            }
-          }
-        &:hover {
-            color: $main-color;
-    
-            svg {
-              opacity: 0;
-            }
-    
-            &:after {
-              opacity: 1;
-            }
+        &:after {
+          opacity: 1;
         }
-        
+      }
     }
 
-
-    .Close{
+    .Close {
       position: absolute;
       color: $base-color;
       font-size: 30px;
-    right: 15px;
-    top: 15px;
-    display: none;
-    cursor: pointer;
-    }
-    }
-    .Social{
-        display: flex;
-        flex-direction: row;
-       
-        
-        a{
-            display: flex;
-            color: $base-color;
-            text-decoration: none;
-            align-items: center;
-            margin-right: 15px;
-            text-align: center;
-            font-size: 20px;
-
-            &:hover{
-                color: $main-color;
-                transition: 0.4s  ease-in-out;
-            }
-
-        }
-    }
-
-
-    .Mobile_menu{
-      display:none;
-      color: $base-color;
-      font-size: 23px;
+      right: 15px;
+      top: 15px;
+      display: none;
       cursor: pointer;
-      @media only screen and (max-width: 785px) {
-        display:block;
-       }
     }
+  }
+  .Social {
+    display: flex;
+    flex-direction: row;
 
+    a {
+      display: flex;
+      color: $base-color;
+      text-decoration: none;
+      align-items: center;
+      margin-right: 15px;
+      text-align: center;
+      font-size: 20px;
+
+      &:hover {
+        color: $main-color;
+        transition: 0.4s ease-in-out;
+      }
     }
+  }
 
-    
-
+  .Mobile_menu {
+    display: none;
+    color: $base-color;
+    font-size: 23px;
+    cursor: pointer;
     @media only screen and (max-width: 785px) {
+      display: block;
+    }
+  }
+}
 
-      .nav-bar{
-      .a-icons{
-        flex-direction: column;
-        position: absolute;
-        top: 0;
-        background-color: black;
-        right: -100%;
-        height: 100vh;
-        align-items: center;
-        justify-content: space-evenly;
-        min-width: 145px;
-        z-index: 555;
+@media only screen and (max-width: 785px) {
+  .nav-bar {
+    .a-icons {
+      flex-direction: column;
+      position: absolute;
+      top: 0;
+      background-color: black;
+      right: -100%;
+      height: 100vh;
+      align-items: center;
+      justify-content: space-evenly;
+      min-width: 145px;
+      z-index: 555;
 
-        transition: 0.4s all ease-in-out;
+      transition: 0.4s all ease-in-out;
+      display: none;
 
+      .homeIcon {
+        margin: 0px;
+      }
+      .Close {
+        display: block;
+      }
 
-        .homeIcon{
-          margin: 0px;
-        }
-    .Close{   
-    display: block;
+      &.active {
+        right: 0;
+        display: flex;
+      }
     }
 
-&.active{
-right: 0;
-}
-      }
+    .Social {
+      position: absolute;
+      bottom: 10px;
+      z-index: 99999;
+      right: -100%;
+      transition: 0.4s all ease-in-out;
+      display: none;
 
-      .Social{
-        position: absolute;
-        bottom: 10px;
-        z-index: 99999;
-       right:-100%;
-       transition: 0.4s all ease-in-out;
-
-       &.active{
+      &.active {
         right: 19px;
-        }
+        display: flex;
+      }
 
-       a{
+      a {
         margin-right: 20px;
-            font-size: 20px;
-       }
+        font-size: 20px;
       }
-     
-      }
-
-     }
+    }
+  }
+}
